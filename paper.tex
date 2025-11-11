@@ -61,7 +61,7 @@
 
 \twocolumn[
 \icmltitle{Memory-Augmented Agentic LLM Using Knowledge Graphs and Vector 
-Databases for Context-Aware Reasoning)}
+Databases for Context-Aware Reasoning}
 
 % It is OKAY to include author information, even for blind
 % submissions: the style file will automatically remove it for you
@@ -81,11 +81,13 @@ Databases for Context-Aware Reasoning)}
 \begin{icmlauthorlist}
 \icmlauthor{Kieslinger, Julian Felix 2025-82736}{yyy}
 \icmlauthor{Salah-Eddine Nifa 2025-82914}{yyy}
+\icmlauthor{Jonghyun Shin 2024-30227}{zzz}
 %\icmlauthor{}{sch}
 %\icmlauthor{}{sch}
 \end{icmlauthorlist}
 
 \icmlaffiliation{yyy}{Department of Data Science, Seoul National University, Seoul, SK}
+\icmlaffiliation{zzz}{Department of Electrical and Computer Engineering, Seoul National University, Seoul, South Korea}
 
 \icmlcorrespondingauthor{Firstname1 Lastname1}{first1.last1@xxx.edu}
 \icmlcorrespondingauthor{Firstname2 Lastname2}{first2.last2@www.uk}
@@ -110,7 +112,7 @@ Databases for Context-Aware Reasoning)}
 \printAffiliationsAndNotice{\icmlEqualContribution} % otherwise use the standard text.
 
 \begin{abstract}
-This document serves as a progress report for our project titled Memory-Augmented Agentic LLM Using Knowledge Graphs and Vector Databases for Context-Aware Reasoning.” 
+This document serves as a progress report for our project titled Memory-Augmented Agentic LLM Using Knowledge Graphs and Vector Databases for Context-Aware Reasoning.
 It summarizes the problem being addressed, related work in the area, methodology developed so far, 
 current progress, and planned next steps.
 \end{abstract}
@@ -127,17 +129,18 @@ Moreover, such an architecture must enable efficient scaling to real-world appli
 By addressing these challenges, the proposed framework aims to push the boundaries of current LLM capabilities, advancing toward fully autonomous agents capable of sustained, context-aware reasoning and decision-making in diverse real-world domains such as software development assistance, personal knowledge management, and interactive dialogue systems.
 
 \section{Related Works}
-Summarize key prior research relevant to your problem.  
-Highlight the main methods, results, or ideas that influence your approach.  
-Discuss the limitations of existing works that your project aims to overcome.
 
-Graphiti.
+Large Language Models (LLMs) have demonstrated remarkable reasoning and generative abilities, yet they remain constrained by a fixed-size context window, which limits their ability to recall information across extended dialogues. Early dialogue-based studies highlighted this ``goldfish memory'' problem, where LLMs rapidly lose track of prior context across long interactions \cite{openai_memory2024}. Simple prompt-history concatenation or full-context attention models partially mitigate this issue but incur quadratic cost growth and lack long-term adaptability.
 
-Vector Databases in general + pgvector.
+To overcome these limitations, retrieval-augmented generation (RAG) methods incorporate external knowledge stores that supply relevant context dynamically. Vector databases such as \textit{pgvector} and \textit{Pinecone} enable efficient semantic retrieval through embedding similarity search \cite{pgvector2023}. While this unstructured memory improves flexibility, it often suffers from noisy retrieval and limited interpretability. In contrast, structured representations like \textbf{knowledge graphs} offer explicit relational reasoning capabilities. 
 
-Other papers from our reading list.
+Recent hybrid approaches combine these two paradigms. Microsoft’s \textbf{GraphRAG} constructs entity-centric graphs from large corpora and employs LLM-generated community summaries to improve retrieval quality over pure vector-based RAG \cite{graphrag2024}. However, its static graph construction leads to slow updates and high query latency, making it less suitable for dynamic knowledge streams. The open-source system \textbf{Graphiti} extends this concept by maintaining a temporally evolving graph database (Neo4j) that incrementally updates entity relations, blending semantic vector search with graph traversal for more contextually grounded responses \cite{graphiti2025}. Empirical results on conversational benchmarks demonstrate improved factual consistency and memory persistence compared to vanilla RAG.
 
-Simpler approaches like OpenAIs memory implementation: https://medium.com/agentman/building-chatgpt-like-memory-openais-new-feature-and-how-to-create-your-own-3e8e3594b670
+Another complementary research direction gives LLMs explicit control over their own memory. \textbf{MemGPT} introduced an operating-system–inspired virtual memory manager that partitions information into “main” and “external” memory and allows the model to swap relevant context dynamically during conversation \cite{memgpt2023}. This enables scalable long-context reasoning without exceeding token limits. Similarly, persistent-memory frameworks in OpenAI’s \textbf{ChatGPT Memory Update (2024)} \cite{openai_memory2024} store user-specific information across sessions, marking a commercial step toward continuous, personalized agents.
+
+To evaluate such systems, benchmarks like \textbf{LongMemEval} \cite{longmemeval2024} were proposed to assess an agent’s long-term factual retention, consistency, and adaptability over multi-session dialogues averaging more than 100K tokens of cumulative context. Systems employing hybrid knowledge–semantic memory, such as Graphiti, have achieved higher relevance and accuracy scores on LongMemEval by retrieving structured facts rather than full histories.
+
+In summary, existing approaches—including GraphRAG, Graphiti, MemGPT, and persistent OpenAI memory—have significantly advanced LLM memory architectures. Yet none fully integrate interpretable structured knowledge with scalable unstructured semantic recall under autonomous update control. Our proposed framework bridges this gap by combining a \textbf{Knowledge Graph} for explicit entity relations with a \textbf{Vector Database} for flexible semantic recall, enabling a persistent, adaptive, and context-aware memory foundation for next-generation agentic LLMs.
 
 \section{Methodology}
 Describe your proposed approach in detail.  
@@ -147,28 +150,18 @@ If applicable, include equations, diagrams, or pseudocode that clarify your meth
 \section{Current Progress}
 Summarize what has been accomplished so far.  
 Include any preliminary results, experiments, or theoretical findings.  
-Use tables or figures as needed.
 
-\begin{table}[ht]
-    \caption{Preliminary experimental results.}
-    \label{tab:results}
-    \vskip 0.15in
-    \begin{center}
-    \begin{small}
-    \begin{sc}
-    \begin{tabular}{lcc}
-    \toprule
-    Experiment & Metric & Result \\
-    \midrule
-    Exp. 1 & Accuracy & 0.87 \\
-    Exp. 2 & RMSE & 1.23 \\
-    \bottomrule
-    \end{tabular}
-    \end{sc}
-    \end{small}
-    \end{center}
-    \vskip -0.1in
-\end{table}
+\subsection{??? (To be determined)}
+\subsection{LongMemEval Integration}
+
+We integrated the \textbf{LongMemEval} benchmark~\cite{longmemeval2024} to standardize the assessment of long-term memory in multi-session dialogue. 
+To make this seamless within our project, we released an open-source wrapper, \texttt{LongMemEval-Advanced-Deeplearning}\footnote{\url{https://github.com/kinsingo/LongMemEval-Advanced-Deeplearning}}, which streamlines dataset ingestion, prediction formatting, and scoring in a reproducible way.
+
+Because the target LLM has not yet been finalized, the current pipeline defaults to the OpenAI API(gpt-4o) as the inference backend, enabling rapid prototyping without local deployment. 
+The interface is deliberately model-agnostic: inference calls are abstracted behind a thin layer so we can later substitute locally hosted models or alternative providers with minimal changes. 
+Once the project’s model choice is fixed, we will adapt this interface to unify logging and metric visualization with our broader evaluation workflow, while preserving compatibility with LongMemEval’s task structure.
+
+
 
 \section{Next Steps}
 List your planned future tasks and timeline.  
@@ -187,7 +180,8 @@ You may divide this section into short-term and long-term goals.
     \item Prepare the paper for submission to [Conference/Journal].
 \end{itemize}
 
-\bibliography{references}
+% \bibliography{references}
+\bibliography{paper}
 \bibliographystyle{icml2025}
 
 \end{document}
