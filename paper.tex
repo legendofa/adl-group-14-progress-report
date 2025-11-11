@@ -60,8 +60,8 @@
 \begin{document}
 
 \twocolumn[
-\icmltitle{Submission and Formatting Instructions for \\
-           International Conference on Machine Learning (ICML 2025)}
+\icmltitle{Memory-Augmented Agentic LLM Using Knowledge Graphs and Vector 
+Databases for Context-Aware Reasoning)}
 
 % It is OKAY to include author information, even for blind
 % submissions: the style file will automatically remove it for you
@@ -80,7 +80,7 @@
 
 \begin{icmlauthorlist}
 \icmlauthor{Kieslinger, Julian Felix 2025-82736}{yyy}
-\icmlauthor{Firstname1 Lastname1}{yyy}
+\icmlauthor{Salah-Eddine Nifa 2025-82914}{yyy}
 %\icmlauthor{}{sch}
 %\icmlauthor{}{sch}
 \end{icmlauthorlist}
@@ -110,19 +110,21 @@
 \printAffiliationsAndNotice{\icmlEqualContribution} % otherwise use the standard text.
 
 \begin{abstract}
-This document serves as a progress report for the project titled “[Your Project Title].” 
+This document serves as a progress report for our project titled Memory-Augmented Agentic LLM Using Knowledge Graphs and Vector Databases for Context-Aware Reasoning.” 
 It summarizes the problem being addressed, related work in the area, methodology developed so far, 
 current progress, and planned next steps.
 \end{abstract}
 
 \section{Problem Definition}
-Clearly state the research problem you are addressing.  
-Explain the motivation and importance of this problem in the broader context.  
-Provide any mathematical formulations, hypotheses, or goals if applicable.
+Large Language Models (LLMs) have demonstrated remarkable capabilities in understanding and generating natural language. However, their effectiveness is inherently limited by the fixed-size context window, which restricts their ability to utilize long-term, evolving knowledge during extended interactions. Traditional LLMs lack persistent memory mechanisms to store, retrieve, and update information accumulated over time, leading to challenges in maintaining contextual consistency, adapting to corrections, and providing coherent responses over long-term dialogues or complex tasks.
 
-Hybrid approach: Knowledge Graph (Graphiti) + VectorDB agent.
+Current approaches to augment LLMs with memory primarily rely either on unstructured retrieval from static document stores or on isolated vector embeddings, both of which suffer from limited interpretability and insufficient integration between structured and unstructured knowledge. This insufficiency hampers the model’s ability to perform context-aware reasoning, dynamic knowledge updating, and sophisticated planning, particularly in scenarios demanding continuous learning and adaptation.
 
-Benchmarking against LongMemEval for verifiable results.
+The core problem addressed in this work is the design of a hybrid memory-augmented, agentic LLM architecture capable of persistent knowledge accumulation, dynamic refinement, and contextually relevant reasoning across long-term interactions. This system must effectively integrate structured memory—using knowledge graphs to represent explicit entities and their relationships—with unstructured semantic memory—using vector databases to enable flexible, similarity-based retrieval. The agent must also autonomously update its internal world model, incorporating user feedback and evolving contextual cues, thereby bridging the gap between limited short-term language context and the necessity for a robust, constantly evolving long-term memory.
+
+Moreover, such an architecture must enable efficient scaling to real-world application complexities, balancing computational resource constraints with the need for accurate and contextually grounded reasoning. To quantitatively evaluate the system’s capabilities, benchmarking against comprehensive datasets such as LongMemEval will provide transparent, verifiable results demonstrating improvements in memory consistency, relevance, and adaptability.
+
+By addressing these challenges, the proposed framework aims to push the boundaries of current LLM capabilities, advancing toward fully autonomous agents capable of sustained, context-aware reasoning and decision-making in diverse real-world domains such as software development assistance, personal knowledge management, and interactive dialogue systems.
 
 \section{Related Works}
 Summarize key prior research relevant to your problem.  
