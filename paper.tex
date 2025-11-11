@@ -1,0 +1,117 @@
+%%%%%%%%%%%%%%% PROGRESS REPORT TEMPLATE (ICML STYLE) %%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+
+% Recommended packages
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb,mathtools,amsthm}
+\usepackage[capitalize,noabbrev]{cleveref}
+\usepackage{hyperref}
+
+% ICML style (uncomment accepted if you want author names shown)
+\usepackage{icml2025}
+% \usepackage[accepted]{icml2025}
+
+% Theorems (optional)
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% Title and Author Info
+\icmltitlerunning{Progress Report on [Project Title]}
+
+\begin{document}
+
+\twocolumn[
+\icmltitle{Progress Report on [Your Project Title]}
+
+\begin{icmlauthorlist}
+\icmlauthor{Your Name}{yyy}
+\end{icmlauthorlist}
+
+\icmlaffiliation{yyy}{Department of [Your Department], [Your University], [City], [Country]}
+\icmlcorrespondingauthor{Your Name}{your.email@university.edu}
+
+\vskip 0.3in
+]
+
+\printAffiliationsAndNotice{} % No equal contribution needed
+
+\begin{abstract}
+This document serves as a progress report for the project titled “[Your Project Title].” 
+It summarizes the problem being addressed, related work in the area, methodology developed so far, 
+current progress, and planned next steps.
+\end{abstract}
+
+\section{Problem Definition}
+Clearly state the research problem you are addressing.  
+Explain the motivation and importance of this problem in the broader context.  
+Provide any mathematical formulations, hypotheses, or goals if applicable.
+
+\section{Related Works}
+Summarize key prior research relevant to your problem.  
+Highlight the main methods, results, or ideas that influence your approach.  
+Discuss the limitations of existing works that your project aims to overcome.
+
+\section{Methodology}
+Describe your proposed approach in detail.  
+Explain your model, algorithm, or theoretical framework.  
+If applicable, include equations, diagrams, or pseudocode that clarify your method.
+
+\section{Current Progress}
+Summarize what has been accomplished so far.  
+Include any preliminary results, experiments, or theoretical findings.  
+Use tables or figures as needed.
+
+\begin{table}[ht]
+    \caption{Preliminary experimental results.}
+    \label{tab:results}
+    \vskip 0.15in
+    \begin{center}
+    \begin{small}
+    \begin{sc}
+    \begin{tabular}{lcc}
+    \toprule
+    Experiment & Metric & Result \\
+    \midrule
+    Exp. 1 & Accuracy & 0.87 \\
+    Exp. 2 & RMSE & 1.23 \\
+    \bottomrule
+    \end{tabular}
+    \end{sc}
+    \end{small}
+    \end{center}
+    \vskip -0.1in
+\end{table}
+
+\section{Next Steps}
+List your planned future tasks and timeline.  
+Identify challenges, resources needed, or potential improvements.  
+You may divide this section into short-term and long-term goals.
+
+\subsection{Short-Term Goals}
+\begin{itemize}
+    \item Implement and test updated model parameters.
+    \item Run additional experiments on larger datasets.
+\end{itemize}
+
+\subsection{Long-Term Goals}
+\begin{itemize}
+    \item Extend the method to real-world applications.
+    \item Prepare the paper for submission to [Conference/Journal].
+\end{itemize}
+
+\section*{Acknowledgements}
+(Optional) Acknowledge any collaborators, supervisors, or funding sources.
+
+\bibliography{references}
+\bibliographystyle{icml2025}
+
+\end{document}
