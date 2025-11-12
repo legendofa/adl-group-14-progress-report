@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.18)  12 NOV 2025 15:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.18)  12 NOV 2025 18:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -949,6 +949,14 @@ st1@xxx.edu\OML/cmm/m/it/9 >\OT1/ptm/m/n/9 (+20) , First-name2 Last-name2
 
 
 
+Package natbib Warning: Citation `openai_memory2024' on page 1 undefined on inp
+ut line 133.
+
+
+Package natbib Warning: Citation `pgvector2023' on page 1 undefined on input li
+ne 135.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -959,9 +967,42 @@ usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
 ]
+
+Package natbib Warning: Citation `graphrag2024' on page 2 undefined on input li
+ne 137.
+
+
+Package natbib Warning: Citation `graphiti2025' on page 2 undefined on input li
+ne 137.
+
+
+Package natbib Warning: Citation `memgpt2023' on page 2 undefined on input line
+ 139.
+
+
+Package natbib Warning: Citation `openai_memory2024' on page 2 undefined on inp
+ut line 139.
+
+
+Package natbib Warning: Citation `longmemeval2024' on page 2 undefined on input
+ line 141.
+
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
+
+
+Package natbib Warning: Citation `longmemeval2024' on page 2 undefined on input
+ line 151.
+
+
+Package natbib Warning: Citation `graphiti2025' on page 2 undefined on input li
+ne 155.
+
+
+Package natbib Warning: Citation `graphiti2025' on page 2 undefined on input li
+ne 163.
 
 
 Package natbib Warning: Citation `graphitirepo2025' on page 2 undefined on inpu
@@ -979,50 +1020,79 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 
 [2]
-<img/zep-extraction-workflow.png, id=60, 1329.96875pt x 831.105pt>
+<img/zep-extraction-workflow.png, id=34, 1329.96875pt x 831.105pt>
 File: img/zep-extraction-workflow.png Graphic file (type png)
 <use img/zep-extraction-workflow.png>
 Package pdftex.def Info: img/zep-extraction-workflow.png  used on input line 17
-7.
+5.
 (pdftex.def)             Requested size: 487.8225pt x 304.8409pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 194--194
-[][][][][]$\OT1/pcr/m/n/9 https : / / github . com / kinsingo /
- []
-
+<img/extraction-and-augmentation-architecture-overview.drawio.png, id=37, 563.1
+0374pt x 402.50375pt>
+File: img/extraction-and-augmentation-architecture-overview.drawio.png Graphic 
+file (type png)
+<use img/extraction-and-augmentation-architecture-overview.drawio.png>
+Package pdftex.def Info: img/extraction-and-augmentation-architecture-overview.
+drawio.png  used on input line 195.
+(pdftex.def)             Requested size: 234.8775pt x 167.88963pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
+
+Package natbib Warning: Citation `longmemeval2024' on page 3 undefined on input
+ line 209.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
+[][][][][]$\OT1/pcr/m/n/9 https : / / github . com / kinsingo /
+ []
+
+
+Underfull \hbox (badness 2134) in paragraph at lines 209--211
+\OT1/ptm/m/n/10 (+20) stan-dard-ize the as-sess-ment of long-term mem-ory in
+ []
+
+
+Underfull \hbox (badness 5802) in paragraph at lines 209--211
+\OT1/ptm/m/n/10 (+20) our project, we re-leased an open-source wrap-per,
+ []
+
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
-09.
+25.
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Underfull \hbox (badness 5681) in paragraph at lines 216--217
+Underfull \hbox (badness 5681) in paragraph at lines 232--233
 []\OT1/ptm/m/n/10 (+20) Prepare the pa-per for sub-mis-sion to [Con-fer-
  []
 
-(./paper.bbl
-Underfull \hbox (badness 1092) in paragraph at lines 21--26
-\OT1/pcr/m/n/10 com / blog / chatgpt-[]memory$[][]\OT1/ptm/m/n/10 (+20) , 2024.
-  Ac-cessed:
- []
-
-)
+No file paper.bbl.
 
 Package natbib Warning: There were undefined citations.
 
 
 
-[3] [4
+[3]
+
+
+
+[4
 pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
 s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.223 \end{document}
-                     <./img/zep-extraction-workflow.png>] (./paper.aux)
+l.239 \end{document}
+                    
+pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) ha
+s been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.239 \end{document}
+                    
+
+ <./img/zep-extraction-workflow.png> <./img/extraction-and-augmentation-archite
+cture-overview.drawio.png>] (./paper.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1031,11 +1101,11 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26643 strings out of 474662
- 494387 string characters out of 5751109
+ 26621 strings out of 474662
+ 494418 string characters out of 5751109
  897887 words of memory out of 5000000
- 48964 multiletter control sequences out of 15000+600000
- 594912 words of font info for 235 fonts, out of 8000000 for 9000
+ 48953 multiletter control sequences out of 15000+600000
+ 594632 words of font info for 233 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  99i,11n,101p,1002b,646s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6
@@ -1046,10 +1116,10 @@ r8a.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/urw/times/utmb8a.p
 fb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></
 usr/local/texlive/2025basic/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/l
 ocal/texlive/2025basic/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (4 pages, 453742 bytes).
+Output written on paper.pdf (4 pages, 473923 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 57362 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 104 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
+ 25 named destinations out of 1000 (max. 500000)
+ 57367 words of extra memory for PDF output out of 61914 (max. 10000000)
 

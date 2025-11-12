@@ -170,8 +170,6 @@ An additional concept that Zep introduces is community nodes. The authors acknow
 For our implementation of Zep, we make use of the Graphit MCP server implementation, which allows us to add user input to the knowledge graph \cite{graphitirepo2025}. We utilize the \texttt{add\_episode} endpoint, which implements episode creation, entity extraction, and fact extraction in itself. The user input is sent to the MCP server, which extracts the relevant information and adds it to the knowledge graph accordingly.
 The MCP server allows us then multiple search tools for retrieving information from the knowledge graph: \texttt{search\_nodes}, \texttt{search\_facts}, \texttt{get\_episodes}. We aim to repopulate the context of the agent by utilizing these search tools.
 
-For simplification purposes, we opt for leaving out the community node creation for now, as it is not essential for the functioning of Zep. Our results should be transitive, as the community nodes should improve retention for the baseline as well as our proposed method. Community nodes can be added at a later point through a periodic job.
-
 \begin{figure*}[t]
     \centering
     \includegraphics[width=\textwidth]{img/zep-extraction-workflow.png}
@@ -179,9 +177,27 @@ For simplification purposes, we opt for leaving out the community node creation 
     \label{fig:zep-extraction-workflow}
 \end{figure*}
 
-Describe your proposed approach in detail.  
-Explain your model, algorithm, or theoretical framework.  
-If applicable, include equations, diagrams, or pseudocode that clarify your method.
+For simplification purposes, we opt for leaving out the community node creation for now, as it is not essential for the functioning of Zep. Our results should be transitive, as the community nodes should improve retention for the baseline as well as our proposed method. Community nodes can be added at a later point through a periodic job.
+
+\subsection{Method Enhancements}
+
+The Zep baseline provides a solid foundation on which we plan to improve our approach. Additionally, we do not want to feed every user input directly into the knowledge graph, but the extraction reasoning layer which decides what information of the input is interesting to add for the knowledge graph and which information we would rather want to put into a vector database for semantic search.
+
+For retrieval, we provide the tools also included in Zep, and additionally vector database search tools. The agent should also decide in retrieval which tool to use for which purpose. This is enforced through prompt engineering.
+
+In combination, this approach should enable us to have a more fine-grained storage and retrieval mechanism. Consisting of augmentations (selective storage) and retrievals (selective retrieval). This is then tested using the LongMemEval benchmark, for both baselines and our proposed method.
+
+For now, we leave the exact implementation details of the extraction reasoning layer open, as we first want to establish the baselines and then experiment with different approaches for the extraction reasoning layer. One of the ideas that we have for improving the extraction reasoning layer is to create multiple questions about the user input, when then is evaluated in how likely the missing bit of information is to be found with a relation to an entity in a knowledge graph, or through semantic similarity search in a vector database. We illustrate this in Figure \ref{fig:extraction-and-augmentation-architecture-overview}.
+
+\begin{figure}[ht]
+\vskip 0.2in
+\begin{center}
+\centerline{\includegraphics[width=\columnwidth]{img/extraction-and-augmentation-architecture-overview.drawio.png}}
+ \caption{Extraction and Augmentation Architecture Overview}
+\label{fig:extraction-and-augmentation-architecture-overview}
+\end{center}
+\vskip -0.2in
+\end{figure}
 
 \section{Current Progress}
 Summarize what has been accomplished so far.  
