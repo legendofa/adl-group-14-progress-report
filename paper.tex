@@ -143,6 +143,42 @@ To evaluate such systems, benchmarks like \textbf{LongMemEval} \cite{longmemeval
 In summary, existing approaches—including GraphRAG, Graphiti, MemGPT, and persistent OpenAI memory—have significantly advanced LLM memory architectures. Yet none fully integrate interpretable structured knowledge with scalable unstructured semantic recall under autonomous update control. Our proposed framework bridges this gap by combining a \textbf{Knowledge Graph} for explicit entity relations with a \textbf{Vector Database} for flexible semantic recall, enabling a persistent, adaptive, and context-aware memory foundation for next-generation agentic LLMs.
 
 \section{Methodology}
+
+In this section, we will explore how our approach systematically improves and integrates parts from existing methods and how we evaluate our model against the state-of-the-art.
+
+\subsection{Experimental configuration}
+
+Our main tool of evaluation is the \textbf{LongMemEval} benchmark \cite{longmemeval2024}, which guides our system development and testing. In order to evaluate our approach, we first decide on our two baseline models:
+
+\begin{enumerate}
+    \item \textbf{GPT-4o} via OpenAI API: This model serves as a strong baseline due to its advanced capabilities and wide adoption. We use it in a zero-shot setting to evaluate its inherent long-term memory capabilities without any augmentation.
+    \item \textbf{Zep}, a memory agent built upon Graphiti \cite{graphiti2025}: As an open-source system that combines knowledge graphs with vector databases, Graphiti provides the core for our own Zep baseline implementation. Zep is not open source, but we implement our own version of Zep, based on the descriptions in the paper.
+\end{enumerate}
+
+\subsection{Zep Baseline Construction}
+
+In order to remodel Zep, we first need to understand which components Zep consists of. Therefore, we conceptualized the Zep extraction workflow, which describes how Zep extracts information from user inputs and stores it in its memory systems. Figure \ref{fig:zep-extraction-workflow} illustrates the Zep extraction workflow. It consists of three sub-workflows:
+
+\begin{enumerate}
+    \item \textbf{Episode Creation}, where an input is linked to existing episodes via the bi-temporal representation that the authors propose in the Zep paper. \cite{graphiti2025}. The system extracts the relative timestamp through temporal normalization and adds the corresponding nodes and edges in the knowledge graph.
+    \item \textbf{Entity Creation}, where the system extracts the relative entities from the input and links them to existing entities in the knowledge graph or creates new entities if they do not exist yet.
+    \item \textbf{Fact Creation}, where the system extracts atomic facts from the input and links them to the corresponding entities and episodes in the knowledge graph. Facts are also embedded and stored in the knowledge graph.
+\end{enumerate}
+
+An additional concept that Zep introduces is community nodes. The authors acknowledge that the creation of community nodes through incremental updates leads to divergence over time; the authors instead propose a periodic job which creates and updates the community nodes.
+
+For our implementation of Zep, we make use of the Graphit MCP server implementation, which allows us to add user input to the knowledge graph \cite{graphitirepo2025}. We utilize the \texttt{add\_episode} endpoint, which implements episode creation, entity extraction, and fact extraction in itself. The user input is sent to the MCP server, which extracts the relevant information and adds it to the knowledge graph accordingly.
+The MCP server allows us then multiple search tools for retrieving information from the knowledge graph: \texttt{search\_nodes}, \texttt{search\_facts}, \texttt{get\_episodes}. We aim to repopulate the context of the agent by utilizing these search tools.
+
+For simplification purposes, we opt for leaving out the community node creation for now, as it is not essential for the functioning of Zep. Our results should be transitive, as the community nodes should improve retention for the baseline as well as our proposed method. Community nodes can be added at a later point through a periodic job.
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=\textwidth]{img/zep-extraction-workflow.png}
+    \caption{Zep Extraction Workflow}
+    \label{fig:zep-extraction-workflow}
+\end{figure*}
+
 Describe your proposed approach in detail.  
 Explain your model, algorithm, or theoretical framework.  
 If applicable, include equations, diagrams, or pseudocode that clarify your method.
@@ -154,7 +190,7 @@ Include any preliminary results, experiments, or theoretical findings.
 \subsection{??? (To be determined)}
 \subsection{LongMemEval Integration}
 
-We integrated the \textbf{LongMemEval} benchmark~\cite{longmemeval2024} to standardize the assessment of long-term memory in multi-session dialogue. 
+We integrated the \textbf{LongMemEval} benchmark \cite{longmemeval2024} to standardize the assessment of long-term memory in multi-session dialogue. 
 To make this seamless within our project, we released an open-source wrapper, \texttt{LongMemEval-Advanced-Deeplearning}\footnote{\url{https://github.com/kinsingo/LongMemEval-Advanced-Deeplearning}}, which streamlines dataset ingestion, prediction formatting, and scoring in a reproducible way.
 
 Because the target LLM has not yet been finalized, the current pipeline defaults to the OpenAI API(gpt-4o) as the inference backend, enabling rapid prototyping without local deployment. 

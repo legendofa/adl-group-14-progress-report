@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.18)  11 NOV 2025 17:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.18)  12 NOV 2025 15:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -887,18 +887,14 @@ Package hyperref Info: Link coloring ON on input line 60.
 \@outlinefile=\write4
 \openout4 = `paper.out'.
 
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 99.
-
 \c@@affilyyy=\count351
+
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 99.
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 101
+.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -906,8 +902,8 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 99.
-
+LaTeX Font Info:    Trying to load font information for U+msb on input line 101
+.
 
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -915,37 +911,46 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
+\c@@affilzzz=\count352
 
-Package hyperref Warning: Ignoring empty anchor on input line 110.
+
+Package hyperref Warning: Ignoring empty anchor on input line 112.
 
 LaTeX Font Info:    Trying to load font information for OML+ptm on input line 1
-10.
+12.
 (/usr/local/texlive/2025basic/texmf-dist/tex/latex/psnfss/omlptm.fd
 File: omlptm.fd 
 )
 LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <9> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 110.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 112.
 
-Underfull \hbox (badness 1354) in paragraph at lines 110--110
-\OT1/ptm/m/n/9 (+20) Na-tional Uni-ver-sity, Seoul, SK. Cor-re-spon-dence to: F
-irst-
+Underfull \hbox (badness 5908) in paragraph at lines 112--112
+\OT1/ptm/m/n/9 (+20) Na-tional Uni-ver-sity, Seoul, SK $[]$Department of Elec-t
+ri-
  []
+
+
+Underfull \hbox (badness 1776) in paragraph at lines 112--112
+\OT1/ptm/m/n/9 (+20) cal and Com-puter En-gi-neer-ing, Seoul Na-tional Uni-ver-
+sity,
+ []
+
+
+Underfull \hbox (badness 5954) in paragraph at lines 112--112
+\OT1/ptm/m/n/9 (+20) Seoul, South Ko-rea. Cor-re-spon-dence to: First-name1
+ []
+
+
+Underfull \hbox (badness 2772) in paragraph at lines 112--112
+\OT1/ptm/m/n/9 (+20) Last-name1 \OML/cmm/m/it/9 <\OT1/ptm/m/n/9 (+20) first1.la
+st1@xxx.edu\OML/cmm/m/it/9 >\OT1/ptm/m/n/9 (+20) , First-name2 Last-name2
+ []
+
+
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 1
-66.
-(/usr/local/texlive/2025basic/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-)
-Underfull \hbox (badness 5681) in paragraph at lines 173--174
-[]\OT1/ptm/m/n/10 (+20) Prepare the pa-per for sub-mis-sion to [Con-fer-
- []
-
-No file paper.bbl.
 
 
 [1{/usr/local/texlive/2025basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/
@@ -953,13 +958,71 @@ usr/local/texlive/2025basic/texmf-dist/fonts/enc/dvips/base/8r.enc}
 
 
 
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-pdfTeX warning (ext4): destination with the same identifier (name{table.1}) has
- been already used, duplicate ignored
+
+
+
+Package natbib Warning: Citation `graphitirepo2025' on page 2 undefined on inpu
+t line 170.
+
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
+70.
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `pcr' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+
+[2]
+<img/zep-extraction-workflow.png, id=60, 1329.96875pt x 831.105pt>
+File: img/zep-extraction-workflow.png Graphic file (type png)
+<use img/zep-extraction-workflow.png>
+Package pdftex.def Info: img/zep-extraction-workflow.png  used on input line 17
+7.
+(pdftex.def)             Requested size: 487.8225pt x 304.8409pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 194--194
+[][][][][]$\OT1/pcr/m/n/9 https : / / github . com / kinsingo /
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
+09.
+(/usr/local/texlive/2025basic/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+)
+Underfull \hbox (badness 5681) in paragraph at lines 216--217
+[]\OT1/ptm/m/n/10 (+20) Prepare the pa-per for sub-mis-sion to [Con-fer-
+ []
+
+(./paper.bbl
+Underfull \hbox (badness 1092) in paragraph at lines 21--26
+\OT1/pcr/m/n/10 com / blog / chatgpt-[]memory$[][]\OT1/ptm/m/n/10 (+20) , 2024.
+  Ac-cessed:
+ []
+
+)
+
+Package natbib Warning: There were undefined citations.
+
+
+
+[3] [4
+pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) ha
+s been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.182 \end{document}
-                    ] (./paper.aux)
+l.223 \end{document}
+                     <./img/zep-extraction-workflow.png>] (./paper.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -968,24 +1031,25 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26428 strings out of 474662
- 491617 string characters out of 5751109
- 892887 words of memory out of 5000000
- 48890 multiletter control sequences out of 15000+600000
- 587351 words of font info for 153 fonts, out of 8000000 for 9000
+ 26643 strings out of 474662
+ 494387 string characters out of 5751109
+ 897887 words of memory out of 5000000
+ 48964 multiletter control sequences out of 15000+600000
+ 594912 words of font info for 235 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 99i,8n,101p,1002b,641s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,11n,101p,1002b,646s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6
 .pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 mi9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmti9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/urw/times/utmb8
-a.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
-></usr/local/texlive/2025basic/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></us
-r/local/texlive/2025basic/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on paper.pdf (1 page, 80844 bytes).
+/cmti9.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/urw/courier/ucr
+r8a.pfb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/urw/times/utmb8a.p
+fb></usr/local/texlive/2025basic/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></
+usr/local/texlive/2025basic/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/l
+ocal/texlive/2025basic/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on paper.pdf (4 pages, 453742 bytes).
 PDF statistics:
- 63 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
- 11 named destinations out of 1000 (max. 500000)
- 53261 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 135 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
+ 57362 words of extra memory for PDF output out of 61914 (max. 10000000)
 
