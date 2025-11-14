@@ -79,17 +79,17 @@ Databases for Context-Aware Reasoning}
 \icmlsetsymbol{equal}{*}
 
 \begin{icmlauthorlist}
-\icmlauthor{Kieslinger, Julian Felix 2025-82736}{yyy}
-\icmlauthor{Salah-Eddine Nifa 2025-82914}{yyy}
-\icmlauthor{Jonghyun Shin 2024-30227}{zzz}
-\icmlauthor{Wun Hur 2023-26041}{xxx}
+\icmlauthor{Kieslinger, Julian Felix 2025-82736}{ds}
+\icmlauthor{Salah-Eddine Nifa 2025-82914}{ds}
+\icmlauthor{Jonghyun Shin 2024-30227}{ece}
+\icmlauthor{Wun Hur 2023-26041}{ipai}
 %\icmlauthor{}{sch}
 %\icmlauthor{}{sch}
 \end{icmlauthorlist}
 
-\icmlaffiliation{yyy}{Department of Data Science, Seoul National University, Seoul, SK}
-\icmlaffiliation{zzz}{Department of Electrical and Computer Engineering, Seoul National University, Seoul, South Korea}
-\icmlaffiliation{xxx}{Interdisciplinary Program in Artificial Intelligence, Seoul National University, Seoul, South Korea}
+\icmlaffiliation{ds}{Department of Data Science, Seoul National University, Seoul, SK}
+\icmlaffiliation{ece}{Department of Electrical and Computer Engineering, Seoul National University, Seoul, South Korea}
+\icmlaffiliation{ipai}{Interdisciplinary Program in Artificial Intelligence, Seoul National University, Seoul, South Korea}
 
 \icmlcorrespondingauthor{Firstname1 Lastname1}{first1.last1@xxx.edu}
 \icmlcorrespondingauthor{Firstname2 Lastname2}{first2.last2@www.uk}
@@ -157,7 +157,7 @@ Our main tool of evaluation is the \textbf{LongMemEval} benchmark \cite{longmeme
     \item \textbf{Zep}, a memory agent built upon Graphiti \cite{graphiti2025}: As an open-source system that combines knowledge graphs with vector databases, Graphiti provides the core for our own Zep baseline implementation. Zep is not open source, but we implement our own version of Zep, based on the descriptions in the paper.
 \end{enumerate}
 
-\subsection{Zep Baseline Construction}
+\subsection{Zep Baseline Construction}\label{sec:zep-baseline-construction}
 
 In order to remodel Zep, we first need to understand which components Zep consists of. Therefore, we conceptualized the Zep extraction workflow, which describes how Zep extracts information from user inputs and stores it in its memory systems. Figure \ref{fig:zep-extraction-workflow} illustrates the Zep extraction workflow. It consists of three sub-workflows:
 
@@ -169,7 +169,7 @@ In order to remodel Zep, we first need to understand which components Zep consis
 
 An additional concept that Zep introduces is community nodes. The authors acknowledge that the creation of community nodes through incremental updates leads to divergence over time; the authors instead propose a periodic job which creates and updates the community nodes.
 
-For our implementation of Zep, we make use of the Graphit MCP server implementation, which allows us to add user input to the knowledge graph \cite{graphitirepo2025}. We utilize the \texttt{add\_episode} endpoint, which implements episode creation, entity extraction, and fact extraction in itself. The user input is sent to the MCP server, which extracts the relevant information and adds it to the knowledge graph accordingly.
+For our implementation of Zep, we make use of the Graphiti MCP server implementation, which allows us to add user input to the knowledge graph \cite{graphitirepo2025}. We utilize the \texttt{add\_episode} endpoint, which implements episode creation, entity extraction, and fact extraction in itself. The user input is sent to the MCP server, which extracts the relevant information and adds it to the knowledge graph accordingly.
 The MCP server allows us then multiple search tools for retrieving information from the knowledge graph: \texttt{search\_nodes}, \texttt{search\_facts}, \texttt{get\_episodes}. We aim to repopulate the context of the agent by utilizing these search tools.
 
 \begin{figure*}[t]
@@ -202,10 +202,30 @@ For now, we leave the exact implementation details of the extraction reasoning l
 \end{figure}
 
 \section{Current Progress}
-Summarize what has been accomplished so far.  
-Include any preliminary results, experiments, or theoretical findings.  
+Since our goal is to build an LLM agent with long-term memory,
+we have been working on integration of necessary components for our agent,
+    reproducing baseline model Zep (of which the source code is not publicly available),
+    and building an evaluation pipeline for our agent.
 
-\subsection{??? (To be determined)}
+\subsection{Integration of Components}
+We built an environment with several components to implement the memory-augmented agentic LLM,
+including the following components:
+\begin{enumerate}
+    \item \texttt{n8n}: a GUI-based tool which allows to build a workflow with LLMs and other tools.
+    \item \texttt{Ollama}: a lightweight LLM server which is used to run LLMs locally.
+    \item \texttt{Open WebUI}: a self-hosted AI interface for interacting with the agent.
+    \item \texttt{PostgreSQL}: a relational database which will serve as a vector database for RAG.
+    \item \texttt{Graphiti}: the core component of Zep, which is published as an open-source project.
+\end{enumerate}
+We tested the integration with a simple workflow.
+
+\subsection{Implementation of Zep Baseline}
+As shown in Figure~\ref{fig:zep-extraction-workflow}, we started implementing the Zep-like baseline
+by concretizing the extraction workflow from the paper.
+To meet the time constraints, we seek to simplify the implementation
+by maximizing the utilization of Graphiti and taking the community node off the scope as stated in
+Section~\ref{sec:zep-baseline-construction}.
+
 \subsection{LongMemEval Integration}
 
 We integrated the \textbf{LongMemEval} benchmark \cite{longmemeval2024} to standardize the assessment of long-term memory in multi-session dialogue. 

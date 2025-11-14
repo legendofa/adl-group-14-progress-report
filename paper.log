@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.5.28)  14 NOV 2025 13:54
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2025.5.28)  14 NOV 2025 18:11
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -699,7 +699,7 @@ with \icmltitlerunning{...} prior to \begin{document}
 *******************************************************
 
 
-\c@@affilyyy=\count339
+\c@@affilds=\count339
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
@@ -715,8 +715,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-\c@@affilzzz=\count340
-\c@@affilxxx=\count341
+\c@@affilece=\count340
+\c@@affilipai=\count341
 
 
 Package hyperref Warning: Ignoring empty anchor on input line 114.
@@ -823,32 +823,33 @@ Underfull \hbox (badness 10000) in paragraph at lines 198--198
 [][][]\TU/ptm/m/it/9 Extraction and Augmentation Architecture
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 212--212
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 232--232
 [][][][][]$[][][][][] [] [] [] [][][][][][] [] [][][] [] [][][][][][][][] []
  []
 
 
-Underfull \hbox (badness 3439) in paragraph at lines 211--213
+Underfull \hbox (badness 3439) in paragraph at lines 231--233
 \TU/pcr/m/n/10 et al.[][], [][]2024[][]) to standardize the assessment of
  []
 
 
-Underfull \hbox (badness 1590) in paragraph at lines 211--213
+Underfull \hbox (badness 1590) in paragraph at lines 231--233
 \TU/pcr/m/n/10 an open-source wrapper, LongMemEval-Advanced-
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3] (./paper.bbl [4]
-Underfull \hbox (badness 1596) in paragraph at lines 47--51
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4] (./paper.bbl
+Underfull \hbox (badness 1596) in paragraph at lines 41--46
 []\TU/pcr/m/n/10 Zep AI.  Graphiti: Real-time knowledge graph
  []
 
-) [5
-
-] (./paper.aux)
+) [5] (./paper.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -856,12 +857,12 @@ Package rerunfilecheck Info: File `paper.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25766 strings out of 477756
- 487833 string characters out of 5843518
- 789279 words of memory out of 5000000
- 45940 multiletter control sequences out of 15000+600000
+ 25768 strings out of 477756
+ 487900 string characters out of 5843518
+ 789354 words of memory out of 5000000
+ 45942 multiletter control sequences out of 15000+600000
  476206 words of font info for 60 fonts, out of 8000000 for 9000
  264 hyphenation exceptions out of 8191
- 99i,11n,94p,1037b,464s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 99i,11n,94p,1037b,450s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on paper.pdf (5 pages).
